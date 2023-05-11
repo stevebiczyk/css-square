@@ -1,0 +1,97 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000;
+}
+
+.box {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 20px;
+    background-color: #333;
+}
+
+.text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 24px;
+}
+
+.dot {
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.dot-green {
+    background-color: #00ff00;
+    animation: dot-green 4s infinite linear;
+}
+
+.dot-pink {
+    background-color: #ff00ff;
+    animation: dot-pink 4s infinite linear;
+}
+
+@keyframes dot-green {
+    0% {
+        top: -5px;
+        left: -5px;
+    }
+
+    25% {
+        top: -5px;
+        right: -5px;
+    }
+
+    50% {
+        top: calc(100% - 5px);
+        right: -5px;
+    }
+
+    75% {
+        top: calc(100% - 5px);
+        left: -5px;
+    }
+
+    100% {
+        top: -5px;
+        left: -5px;
+    }
+}
+
+@keyframes dot-pink {
+    0% {
+        top: -5px;
+        right: -5px;
+    }
+
+    25% {
+        top: calc(100% - 5px);
+        right: -5px;
+    }
+
+    50% {
+        top: calc(100% - 5px);
+        left: -5px;
+    }
+
+    75% {
+        top: -5px;
+        left: -5px;
+    }
+
+    100% {
+        top: -5px;
+        right: -5px;
+    }
+}
